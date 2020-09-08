@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+}
+#menu-box{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    display:none;
+    background-color: rgba(0,0,0,0.7);
+}
+#sections{
+    display:inline-flex;
+    width:auto;
+    position:relative;
+}
+.section{
+    width:33vw;
+    height:100vh;
+    background-color: gray;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top:15vh;
+    background-color: #151a21;
+    margin-left:0;
+}
+#section-1{
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+#section-1::-webkit-scrollbar { 
+    width: 0 !important;
+}
+#section-2{
+    display:none;
+}
+#links a{
+    text-decoration: none;
+}
+#close-btn{
+    position: absolute;
+    top:0;
+    right:0;
+    margin:5vh 3vw 0 0;
+    font-size:5vh;
+    color:#787b80;
+    background-color: transparent;
+    border:none;
+    cursor:pointer;
+    outline:none;
+    transition:.2s;
+}
+#picture{
+    display:none;
+    width:33vw;
+    height:100vh;
+    pointer-events: none !important;
+}
+#picture img{
+    display:block;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    pointer-events: none !important;
+}
+ul{
+    width:100%;
+    margin:0;
+    padding:0;
+}
+ul li{
+    list-style-type: none;
+    margin:auto;
+    width:70%;
+    height:12vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:6vh;
+    color:#787b80;
+    cursor:pointer;
+    transition: .2s;
+}
+ul li:hover, #close-btn:hover{
+    color:white;
+}
+#links{
+    margin:10vh auto 10vh;
+    display: grid;
+    width:80%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+#links li{
+    height:6vh;
+    font-size: 3vh;
+    width:auto;
+}
+#links li:hover{
+    text-decoration: underline;
+}
+
+@keyframes slideIn{
+    0%{
+        width:0;
+        opacity:0;
+    }
+    100%{
+        width:33vw;
+        opacity:1;
+    }
+}
+@keyframes slideOut{
+    0%{
+        width:33vw;
+    }
+    100%{
+        width:0;
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    75%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes fadeOut{
+    0%{
+        opacity:1;
+    }
+    25%{
+        opacity:0;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    #section-1, #sections{
+        width:100vw;
+    } 
+    @keyframes slideIn{
+        0%{
+            width:0;
+        }
+        100%{
+            width:100vw;
+        }
+    }
+    @keyframes slideOut{
+        0%{
+            width:100vw;
+        }
+        100%{
+            width:0;
+        }
+    }
+}

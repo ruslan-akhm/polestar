@@ -1,0 +1,105 @@
+#content{
+    width:95%;
+    min-height:75vh;
+    margin:10vh auto;
+    display:flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.content-pic-box{
+    width:100%;
+    height:75vh;
+    overflow: hidden;
+    position:relative;
+}
+.pic2-box{
+    height:100%;
+}
+.content-pic-box img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit: cover;
+}
+.content-info-box{
+    min-height:15vh;
+    width:100%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    padding:5vh 10% 0 10%;
+}
+.content-info-box h2{
+    grid-area:1/1/2/2;
+    width:80%;
+    margin-left:0;
+    font-size:4vh;
+}
+.content-info-box p{
+    grid-area:1/2/2/4;
+    font-size:3vh;
+}
+.content-info-box a{
+    grid-area:2/2/3/3;
+    width:fit-content;
+    height: fit-content;
+    cursor:pointer;
+    transition: .2s ease;
+    font-size:2.5vh;
+}
+.content-info-box a:hover{
+    color:#91908a;
+}
+.info-box-2{
+    background-color: #5c5c57;
+    margin-bottom:10vh;
+}
+.info-box-2 h2, .info-box-2 p{
+    color:white;
+}
+.info-box-2 a{
+    background-color: white;
+    height:6vh;
+    width:12vw;
+    padding:10px;
+    min-width:fit-content;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-box-2 a:hover{
+    color:inherit;
+    background-color:#e9e9f2;
+}
+#pic2-text{
+    position: absolute;
+    top:5vh;
+    left:5vw;
+    width:16vw;
+    height:35vh;
+}
+#pic2-text h2{
+    font-size: 4vh;
+}
+#pic2-text p{
+    font-size: 3vh;
+}
+#pic2-text a{
+    cursor: pointer;
+    transition: .2s ease;
+    font-size: 2.5vh;
+}
+#pic2-text a:hover{
+    color:#5c5c57;
+}
+
+@media only screen and (max-width: 1200px){
+    #pic2-text{
+        position: static;
+        width:100%;
+    }
+    .content-info-box{
+        padding:5vh 5% 0 5%;
+    }
+}

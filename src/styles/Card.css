@@ -1,0 +1,200 @@
+#cards-box{
+    width:95%;
+    height:90vh;
+    background-color:#edebe4;
+    margin:5vh auto;
+    display:flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+#cards{
+    height:90%;
+    min-width:150%;
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+} 
+.card{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    height:100%;
+    width:75%;
+}
+.card:nth-child(even) .text-box{
+    order:1;
+}
+.card .text-box{
+    width:35%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 15vh;
+}
+.card .text-box p{
+    font-size:4vh;
+    padding:1rem;
+    margin:auto auto;
+}
+.card .text-box hr{
+    border-top:0.4vh solid black;
+    height:1px;
+    width:4vw;
+    text-align: left;
+    margin-left:0;
+}
+.card .text-box button{
+    min-width:10vw;
+    height:5vh;
+    background-color:#5c5c57;
+    color:white;
+    border:none;
+    font-size:3vh;
+    cursor:pointer;
+    transition: .2s;
+    margin:auto;
+    pointer-events:auto !important;
+}
+ .card .text-box button:hover{
+    background-color:#91908a;
+}
+.card .pic-box{
+    display:flex;
+    justify-content: center;
+    width:70%;
+    min-width: 400px;
+}
+.card .pic-box picture{
+    width:100%;
+}
+.card .pic-box picture img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit: contain;
+    cursor:pointer;
+    transform: scale3d(0.9,0.9,0.9);
+    transition:0.6s ease-out;
+}
+#right:hover, #left:hover{
+    transform: scale3d(1,1,1);
+    transform: translate3d(-10px,0,0);
+}
+#left:hover{
+    transform: translate3d(10px,0,0);
+}
+.pic-active{
+    transform: scale3d(1,1,1) !important;
+    pointer-events: none;
+}
+.slider-box{
+    width:100%;
+    min-height:8vh;
+    height:10%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.slide{
+    width:4.5vw;
+    height:0.5vh;
+    background-color:#bdbbb3;
+    margin:20px;
+    cursor:pointer;
+    transition: .2s;
+}
+.slide:hover{
+    background-color: #7a7976;
+}
+.active-slide{
+    width:4.5vw;
+    height:0.5vh;
+    margin:20px;
+    pointer-events: none;
+    background-color:orange;
+    transition: .2s;
+}
+
+@media only screen and (max-width: 1200px){
+    #cards-box{
+        margin-top:10vh;
+        height:auto;
+        background-color: transparent;
+    }
+    #cards{
+        height:100%;
+        min-width:100%;
+        width:100%; 
+        flex-direction: column;
+        justify-content: space-between;
+        animation:none !important;
+        margin:0 !important;
+    }
+    .card{
+        width:100%;
+        height:50%;
+        background-color: #edebe4;
+        margin-bottom:30px;
+    }
+    .card:nth-child(even) .text-box{
+        order:-1;
+    }
+    .card .pic-box{
+        justify-content: flex-end;
+    }
+    .card .pic-box picture img{
+        pointer-events: none;
+        object-fit: contain;
+        transform: scale3d(1,1,1);
+    }
+    #right:hover, #left:hover{
+        transform: scale3d(1,1,1);
+        transform: translate3d(0,0,0);
+    }
+    .slider-box{
+        display:none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #cards{
+        height:100%;
+        justify-content: space-between;
+    }
+    .card{
+        flex-direction:column-reverse;
+    }
+    .card .text-box{
+        height:20%;
+        width:100%;
+        min-height:140px;
+        grid-template-columns: 1fr 150px;
+        grid-template-rows: 1fr;
+    }
+    .card .text-box p{
+        font-size:18px;
+        padding:20px;
+        width:100%;
+        height:100%;
+    }
+    .card .pic-box{
+        height:80%;
+        width:100%;
+    }
+}
+
+@keyframes slideLeft {
+    0%{
+        margin-left:-1%;
+    }
+    100%{
+        margin-left:-50%;
+    }
+}
+@keyframes slideRight {
+    0%{
+        margin-left:-50%;
+    }
+    100%{
+        margin-left:0%;
+    }
+}
