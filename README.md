@@ -15,7 +15,7 @@ The app is available Live [on GithubPages](https://polestar-clone.github.io/pole
 ---
 ### Highlights
   - Homepage of original polestar.com website (older version) mocks the UI and UX
-  - Several stages of mobile layout to have great interface while fitting any screen size
+  - Several stages of mobile layout to have great interface while fitting any size screen
   - Animations and interactions even in small details (menu window, mobile layout footer list)
   
 ---
