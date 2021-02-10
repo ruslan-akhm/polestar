@@ -3,7 +3,7 @@
 ### About 
 Polestar.com homepage (older version). Built mainly to practice Front-End skills like animations, transitions, interactions and responsive design with CSS and React. 
 
-The app was originally is available Live [on GithubPages](https://polestar-clone.github.io/polestar/)
+The app is available Live [on GithubPages](https://polestar-clone.github.io/polestar/)
 
 ---
 ### Preview 
